@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/XivelyFeedID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:hint="Xively Feed ID"
+        android:ems="100" >        
+    </EditText>
+    
+    <EditText
+        android:id="@+id/XivelyAPIkey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/XivelyFeedID"
+        android:layout_marginTop="5dp"
+        android:hint="Xively API Key"
+        android:ems="100">
+    </EditText>
+    
+    
+	<EditText 
+	    android:id="@+id/number_input"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@id/XivelyAPIkey"
+	    android:layout_marginTop="5dp"
+	    android:hint="Number to Upload"
+	    android:ems="100" >
+    </EditText>
+	
+	<Button
+	    android:id="@+id/buttonUpload"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/number_input"
+	    android:layout_marginTop="10dp"
+	    android:layout_alignLeft="@id/number_input"
+	    android:onClick="onClick"
+	    android:text="@string/button_upload_text" >
+	</Button>
+
+	<CheckBox
+	    android:id="@+id/feed1_label"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@id/buttonUpload"
+	    android:layout_below="@+id/buttonUpload"
+	    android:layout_marginTop="10dp"
+	    android:text="@string/feed1_label" >
+	</CheckBox>
+	
+	<CheckBox
+	    android:id="@+id/feed2_label"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignRight="@id/number_input"
+	    android:layout_below="@+id/buttonUpload"
+	    android:layout_marginTop="10dp"
+	    android:text="@string/feed2_label" >
+	</CheckBox>
+
+	<TextView
+	    android:id="@+id/XivelyToggleLabel"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@id/feed1_label"
+	    android:layout_below="@id/feed1_label"
+	    android:layout_marginTop="5dp"
+	    android:text="@string/XivelyUploadLabel"
+		android:ems="150">
+	</TextView>
+	
+	<ToggleButton
+	    android:id="@+id/toggleButtonUploadXively"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@id/XivelyToggleLabel"
+	    android:layout_below="@id/XivelyToggleLabel"
+	    android:onClick="onClickXivelyToggle" />
+
+</RelativeLayout>
